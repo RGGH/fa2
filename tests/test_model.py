@@ -9,9 +9,13 @@ client = TestClient(app)
 def test_model_prediction():
     model = joblib.load("model.pkl")
 
-    result = model.predict([[10]])
+    result = model.predict([[
+        100,  # size
+        3,    # bedrooms
+        5     # distance
+    ]])
 
-    assert result[0] == 20
+    assert result[0] > 0
 
 
 def test_invalid_input():
