@@ -24,7 +24,6 @@ A small full-stack demo that predicts house prices from size, bedroom count, and
     └── script.js         # Frontend prediction logic
 ```
 
-> **Note:** `index.html` currently contains its own inline `<script>` for the `predict()` function as well as a separate `static/script.js` with the same logic. Only one of these is needed — you'll likely want to remove the inline script and rely solely on `static/script.js` (or vice versa) to avoid duplication.
 
 ## Requirements
 
