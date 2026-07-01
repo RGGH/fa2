@@ -11,8 +11,22 @@
     <h1>Linear Regression Predictor</h1>
 
     <label>
-        Enter value:
-        <input id="value" type="number" value="10">
+        Size (m²):
+        <input id="size" type="number" value="100">
+    </label>
+
+    <br>
+
+    <label>
+        Bedrooms:
+        <input id="bedrooms" type="number" value="3">
+    </label>
+
+    <br>
+
+    <label>
+        Distance from city (km):
+        <input id="distance" type="number" value="5">
     </label>
 
     <br>
@@ -24,7 +38,10 @@
 
     <script>
         async function predict() {
-            const value = document.getElementById("value").value;
+
+            const size = document.getElementById("size").value;
+            const bedrooms = document.getElementById("bedrooms").value;
+            const distance = document.getElementById("distance").value;
 
             const response = await fetch("/predict", {
                 method: "POST",
@@ -32,14 +49,16 @@
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    value: Number(value)
+                    size: Number(size),
+                    bedrooms: Number(bedrooms),
+                    distance: Number(distance)
                 })
             });
 
             const data = await response.json();
 
             document.getElementById("result").innerHTML =
-                `Prediction: ${data.prediction}`;
+                `Prediction: £${data.prediction.toFixed(2)}`;
         }
     </script>
 

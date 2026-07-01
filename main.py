@@ -22,17 +22,23 @@ model = joblib.load("model.pkl")
 
 
 class Input(BaseModel):
-    value: float
+    size: float
+    bedrooms: float
+    distance : float
 
 
 @app.post("/predict")
 def predict(data: Input):
-    prediction = model.predict([[data.value]])
+
+    prediction = model.predict([[
+        data.size,
+        data.bedrooms,
+        data.distance
+    ]])
 
     return {
         "prediction": prediction[0]
     }
-
 
 @app.get("/")
 def index():
