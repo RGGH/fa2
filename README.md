@@ -118,8 +118,7 @@ The model is a `LinearRegression` from scikit-learn, trained on a small hardcode
 - No input validation beyond basic type checking (e.g. negative sizes/bedrooms are accepted)
 - Training dataset is tiny and hardcoded — consider loading from a CSV or database
 - No persistence/versioning of trained models beyond overwriting `model.pkl`
-- Duplicate prediction logic between inline script and `static/script.js` (see note above)
 
 ## License
 
-Add your license of choice here.
+MIT
