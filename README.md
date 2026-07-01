@@ -1,4 +1,5 @@
-# Linear Regression House Price Predictor
+# Linear Regression House Price Predictor 
+![Tests](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/tests.yml/badge.svg)
 
 A small full-stack demo that predicts house prices from size, bedroom count, and distance from the city center, using a scikit-learn linear regression model served through a FastAPI backend and a plain HTML/JS frontend.
 
