@@ -3,6 +3,8 @@
 
 A small full-stack demo that predicts house prices from size, bedroom count, and distance from the city center, using a scikit-learn linear regression model served through a FastAPI backend and a plain HTML/JS frontend.
 
+<img width="1918" height="1046" alt="image" src="https://github.com/user-attachments/assets/4943347c-45af-4f27-be63-d7c4585e383c" />
+
 ## Features
 
 - FastAPI backend with a single `/predict` endpoint
