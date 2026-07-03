@@ -27,6 +27,7 @@ class Input(BaseModel):
     distance : float
 
 
+
 @app.post("/predict")
 def predict(data: Input):
 
